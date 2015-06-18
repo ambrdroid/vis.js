@@ -2,3 +2,6 @@ Allow from all
 RewriteEngine on
 RedirectMatch 404 /\\.git(/|$)
 
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /vis.js/.htpasswd

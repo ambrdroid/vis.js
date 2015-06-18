@@ -8,7 +8,7 @@ if (! window.AudioContext) {
 var colors = {
 	'EDM': '#C1C1C1',
 	'House': '#EB8200',
-	'Drumstep': '#F12188',
+	'Drumstep': '#F01E87',
 	'Drum & Bass': '#FF1900',
 	'Trance': '#0080E6',
 	'Electro': '#E5CE00',
@@ -17,7 +17,7 @@ var colors = {
 	'Nu Disco': '#16ACB0',
 	'Dubstep': '#941DE8',
 	'Trap': '#8C0F28',
-	'Future Bass': '#B8B8FF',
+	'Future Bass': '#979EFF',
 	'BTC': '#000000'
 };
 var color;
