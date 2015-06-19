@@ -19,6 +19,7 @@ var colors = {
 	'Trap': '#8C0F28',
 	'Future Bass': '#979EFF',
 	'Mirai Sekai': '#FFFFFF',
+	'Hold': '#FFFFFF',
 	'BTC': '#000000'
 };
 var color;
@@ -119,6 +120,14 @@ if (song.getGenre() == 'Mirai Sekai') {
 	$('.content').css('textShadow','0px 0px 20px rgba(0, 0, 0, 0.9)');
 	$(".mvbg").html("<video loop id=\"bgvid\"><source src=\"https://r5---sn-ntq7en7r.googlevideo.com/videoplayback?fexp=910100%2C936122%2C9406444%2C9407141%2C9408142%2C9408420%2C9408710%2C9409228%2C9410706%2C9412770%2C9413503%2C9415304%2C9416126%2C9416456%2C9416499%2C9416511%2C952626%2C952640&upn=il9xM9QBNEQ&mime=video%2Fwebm&expire=1434738316&ipbits=0&requiressl=yes&lmt=1409722265389670&itag=248&keepalive=yes&ip=2001:8003:2214:7c01:7cf7:e828:4b1:72de&dur=859.859&source=youtube&id=o-ABYN67unT6iBYJhpnYCRi2Tx6HH46RsRUItVF82_MNR2&key=cms1&clen=130417084&sparams=clen,dur,expire,gir,id,initcwndbps,ip,ipbits,itag,keepalive,lmt,mime,mm,mn,ms,mv,nh,pl,requiressl,source,upn&signature=7678797384215D49EC2DA42EA5990B329FED6419.093D284AC658184E0849BD65955C761107445CD7&pl=38&sver=3&gir=yes&ratebypass=yes&title=Varien+%26+7+Minutes+Dead+-+Mirai+Sekai&redirect_counter=1&req_id=e4e305863ac9a3ee&cms_redirect=yes&mm=30&mn=sn-ntq7en7r&ms=nxu&mt=1434716777&mv=m&nh=IgpwcjAxLnN5ZDA5KgkxMjcuMC4wLjE\" type=\"video/webm\"></video>");
 }
+
+if (song.getGenre() == 'Hold') {
+	$('.partsbg').hide();
+	$('#vig').hide();
+	$('.content').css('textShadow','0px 0px 20px rgba(0, 0, 0, 0.9)');
+	$(".mvbg").html("<video loop id=\"bgvid\"><source src=\"https://r4---sn-ntq7yn7l.googlevideo.com/videoplayback?expire=1434742185&sver=3&dur=213.600&requiressl=yes&ip=2001:8003:2214:7c01:7cf7:e828:4b1:72de&ipbits=0&gcr=fr&pl=38&mime=video%2Fwebm&id=o-AI1H0M5A8H4CWst4BD9RGxMkO0PZguiaT6AzjHKRlROi&itag=248&keepalive=yes&lmt=1432571992113992&key=cms1&upn=eKL_hkJoiNw&gir=yes&source=youtube&clen=19410905&sparams=clen,dur,expire,gcr,gir,id,initcwndbps,ip,ipbits,itag,keepalive,lmt,mime,mm,mn,ms,mv,nh,pl,requiressl,source,upn&fexp=9407135%2C9407141%2C9407992%2C9408093%2C9408142%2C9408420%2C9408710%2C9412773%2C9413503%2C9415304%2C9415745%2C9415878%2C9416126%2C9416456%2C952626%2C952640&signature=0858353E0665AAC4A7E46078B7750A05A09E7A6A.18A8ABE09C4E0352EB73ED2A8AA87365D8883B53&ratebypass=yes&title=%5BFuture+Bass%5D+-+San+Holo+-+Hold+Fast+(feat.+Tessa+Douwstra)+%5BMonstercat+Official+Music+Video%5D&redirect_counter=1&req_id=81ef470b834ba3ee&cms_redirect=yes&mm=30&mn=sn-ntq7yn7l&ms=nxu&mt=1434720545&mv=m&nh=IgpwcjAxLnN5ZDEwKgkxMjcuMC4wLjE\" type=\"video/webm\"></video>");
+}
+
 
 $('html').mousemove(function(event) {
 	if (textHidden) {
@@ -236,7 +245,7 @@ function drawBlock() {
 
 	img.src = prefix + '/img/mcat.svg';
 	
-	if (song.getGenre() == 'Mirai Sekai') {
+	if (song.getGenre() == 'Mirai Sekai' || 'Hold') {
 		img.src = prefix + '/img/mcatblack.svg';
 	}
 }
@@ -299,7 +308,7 @@ function loadSound(url) {
 
 function playSound(buffer) {
 	
-	if (song.getGenre() == 'Mirai Sekai') {
+	if (song.getGenre() == 'Mirai Sekai' || 'Hold') {
 		$('#bgvid').get(0).play()
 	}
 	
