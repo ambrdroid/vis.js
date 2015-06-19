@@ -100,7 +100,7 @@ html {
 	left: 0;
 	right: 0;
 	bottom: 0;
-    box-shadow: inset 0 0 20em 7em rgba(0,0,0,0.4);
+    box-shadow: inset 0 0 20em 7em rgba(0,0,0,0.5);
 	z-index: 997;
 }
 
@@ -149,5 +149,5 @@ z-index: -100;
 transform: translateX(-50%) translateY(-50%);
 background: url(placeholder.jpg) no-repeat;
 background-size: cover;
--webkit-filter: brightness(75%);
+-webkit-filter: brightness(85%);
 }
