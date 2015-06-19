@@ -18,6 +18,7 @@ var colors = {
 	'Dubstep': '#941DE8',
 	'Trap': '#8C0F28',
 	'Future Bass': '#979EFF',
+	'miraisekai': '#FFFFFF',
 	'BTC': '#000000'
 };
 var color;
@@ -110,6 +111,11 @@ if (song.getGenre() == 'ayy lmao') {
 	$('.ayylmao').show();
 	$('.kitty').css('margin-top', -blockSize + blockTopPadding - 21);
 	$('.kitty').attr('height', blockSize);
+}
+
+if (song.getGenre() == 'miraisekai') {
+	$('.partsbg').hide();
+	$(".mvbg").html("<video autoplay loop id=\"bgvid\"><source src=\"https://r5---sn-ntq7en7r.googlevideo.com/videoplayback?fexp=910100%2C936122%2C9406444%2C9407141%2C9408142%2C9408420%2C9408710%2C9409228%2C9410706%2C9412770%2C9413503%2C9415304%2C9416126%2C9416456%2C9416499%2C9416511%2C952626%2C952640&upn=il9xM9QBNEQ&mime=video%2Fwebm&expire=1434738316&ipbits=0&requiressl=yes&lmt=1409722265389670&itag=248&keepalive=yes&ip=2001:8003:2214:7c01:7cf7:e828:4b1:72de&dur=859.859&source=youtube&id=o-ABYN67unT6iBYJhpnYCRi2Tx6HH46RsRUItVF82_MNR2&key=cms1&clen=130417084&sparams=clen,dur,expire,gir,id,initcwndbps,ip,ipbits,itag,keepalive,lmt,mime,mm,mn,ms,mv,nh,pl,requiressl,source,upn&signature=7678797384215D49EC2DA42EA5990B329FED6419.093D284AC658184E0849BD65955C761107445CD7&pl=38&sver=3&gir=yes&ratebypass=yes&title=Varien+%26+7+Minutes+Dead+-+Mirai+Sekai&redirect_counter=1&req_id=e4e305863ac9a3ee&cms_redirect=yes&mm=30&mn=sn-ntq7en7r&ms=nxu&mt=1434716777&mv=m&nh=IgpwcjAxLnN5ZDA5KgkxMjcuMC4wLjE\" type=\"video/webm\"></video>");
 }
 
 $('html').mousemove(function(event) {
@@ -225,7 +231,12 @@ function drawBlock() {
 	}
 	var loc = window.location.pathname;
 	var prefix = 'http://' + window.location.hostname + loc.substring(0, loc.lastIndexOf('/'));
+
 	img.src = prefix + '/img/mcat.svg';
+	
+	if (song.getGenre() == 'miraisekai') {
+		img.src = prefix + '/img/mcatblack.svg';
+	}
 }
 
 function setupAudioNodes() {

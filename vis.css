@@ -47,7 +47,7 @@ html {
 
 .content {
 	position: absolute;
-	text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+	text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
 }
 
 .content #artist {
@@ -134,4 +134,20 @@ html {
 	color: #FFF; 
 	text-align: center; 
 	padding-bottom: 75px;
+}
+
+video#bgvid {
+position: fixed;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -100;
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+background: url(polina.jpg) no-repeat;
+background-size: cover;
+-webkit-filter: brightness(75%);
 }
